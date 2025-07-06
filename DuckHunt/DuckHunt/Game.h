@@ -11,17 +11,11 @@
 /// </summary>
 #include <SFML/Graphics.hpp>
 #include "Globals.h"
+#include "Duck.h"
 
 class Game
 {
-public:
-	Game();
-	~Game();
-	/// <summary>
-	/// main method for game
-	/// </summary>
-	void run();
-
+	
 private:
 
 	void processEvents();
@@ -30,7 +24,6 @@ private:
 	void render();
 	
 	void setupFontAndText();
-	void setupSprite();
 
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message
@@ -39,6 +32,16 @@ private:
 	sf::Sprite m_logoSprite; // sprite used for sfml logo
 	bool m_exitGame; // control exiting game
 
+	//Duck object
+	Duck m_Duck;
+
+public:
+	Game();
+	~Game();
+	/// <summary>
+	/// main method for game
+	/// </summary>
+	void run();
 };
 
 #endif // !GAME_HPP

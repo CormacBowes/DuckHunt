@@ -108,6 +108,10 @@ void Game::update(sf::Time t_deltaTime)
 	{
 		m_window.close();
 	}
+
+	//update duck data
+	m_Duck.update();
+
 }
 
 /// <summary>
@@ -116,6 +120,10 @@ void Game::update(sf::Time t_deltaTime)
 void Game::render()
 {
 	m_window.clear(sf::Color::White);
+
+	//draw duck
+	m_window.draw(m_Duck.getBody());
+
 	m_window.display();
 }
 
